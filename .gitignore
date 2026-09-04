@@ -1,0 +1,17 @@
+# Default deny: this repository tracks only its portable skill bundle.
+*
+
+!.gitignore
+!README.md
+!CLAUDE.md
+!.claude-plugin/
+!.claude-plugin/**
+!docs/
+!docs/**
+!scripts/
+!scripts/**
+!skills/
+!skills/engineering/
+!skills/engineering/**
+!skills/interview/
+!skills/interview/**
