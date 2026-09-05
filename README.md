@@ -1,9 +1,9 @@
 # Engineering Skills
 
-Agent skills for software-engineering reviews, repository workflows, and
-technical interview practice.
+Agent skills for software-engineering reviews, hands-on technical learning,
+repository workflows, and interview practice.
 
-Thinking, productivity, learning, and writing skills live in
+General learning-loop, productivity, and writing skills live in
 [`devinat1/skills`](https://github.com/devinat1/skills).
 
 ## Quickstart
@@ -45,3 +45,8 @@ git clone git@github.com:devinat1/engineering-skills.git ~/.claude/repos/enginee
 - **[leetcode-readiness](./skills/interview/leetcode-readiness/SKILL.md)** — Use when the user invokes /leetcode-readiness or wants an evidence-based LeetCode progress assessment, interview-readiness date, or next-week problem plan from LeetCode and Obsidian history.
 - **[system](./skills/interview/system/SKILL.md)** — Conducts realistic system design interview practice sessions using the Socratic method. Use when the user invokes /system or wants mock system design interview practice.
 - **[vc-pitch-drill](./skills/interview/vc-pitch-drill/SKILL.md)** — Run direct, focused pre-seed VC pitch practice drills. Use when the user wants mock investor questions, fundraising pitch practice, pressure-testing of investor answers, or help translating rough startup answers into stronger VC-style language.
+
+### Learning
+
+- **[break-it](./skills/learning/break-it/SKILL.md)** — Use to learn a system-design or performance concept by watching the naive version break under load and the pattern hold — "break it", "load test this", "where does this fall over", "/break-it &lt;concept&gt;". Builds a disposable Go+k6 lab; the user predicts the breaking point, runs it, sees the wall, applies the fix, re-runs. Load-measurable concepts only (pool exhaustion, missing cache, N+1, no rate limiting, no backpressure, no circuit breaker). NOT for refactoring or terminology — those are untangle / name-it.
+- **[lab-creator](./skills/learning/lab-creator/SKILL.md)** — Scaffolds a single hands-on lab (runnable unit tests for code, graded scenarios for concepts) targeting one concept. Use when the user says "create a lab on x", "give me an exercise on x", "make me a hands-on exercise", and when the learn skill requests a gap-targeted lab. Scaffolds files only — it does NOT grade or run the calibration check.

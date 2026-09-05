@@ -14,6 +14,8 @@
     "./skills/interview/interviewer",
     "./skills/interview/leetcode-readiness",
     "./skills/interview/system",
-    "./skills/interview/vc-pitch-drill"
+    "./skills/interview/vc-pitch-drill",
+    "./skills/learning/break-it",
+    "./skills/learning/lab-creator"
   ]
 }
