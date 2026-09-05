@@ -15,7 +15,7 @@ npx skills@latest add devinat1/engineering-skills
 ```
 
 To keep a local checkout inside the Claude folder and link every skill into
-Claude Code and Codex:
+Claude Code, Codex, and Cursor:
 
 ```bash
 git clone git@github.com:devinat1/engineering-skills.git ~/.claude/repos/engineering-skills
