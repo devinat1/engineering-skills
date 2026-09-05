@@ -16,6 +16,6 @@
     "./skills/interview/system",
     "./skills/interview/vc-pitch-drill",
     "./skills/learning/break-it",
-    "./skills/learning/lab-creator"
+    "./skills/learning/lab"
   ]
 }

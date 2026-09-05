@@ -10,4 +10,4 @@ generated metadata and flat links in `~/.claude/skills/` and `~/.codex/skills/`.
 
 General learning-loop, productivity, writing, and setup skills belong in
 `devinat1/skills`. This repository owns the hands-on `break-it` and
-`lab-creator` learning skills.
+`lab` learning skills.
