@@ -18,8 +18,8 @@ To keep a local checkout inside the Claude folder and link every skill into
 Claude Code, Codex, and Cursor:
 
 ```bash
-git clone git@github.com:devinat1/engineering-skills.git ~/.claude/repos/engineering-skills
-~/.claude/repos/engineering-skills/scripts/link-skills.sh
+git clone git@github.com:devinat1/engineering-skills.git ~/.agentic/repos/engineering-skills
+~/.agentic/repos/engineering-skills/scripts/link-skills.sh
 ```
 
 ## Skills

@@ -32,7 +32,7 @@ for the generated file shape.
 Resolve the destination as:
 
 ```text
-~/.claude/process-exercises/<repo>/YYYY-MM-DD-<topic-slug>/
+~/.agentic/artifacts/process-exercises/<repo>/YYYY-MM-DD-<topic-slug>/
 ```
 
 Append `-2`, `-3`, and so on when needed. Resolve `<repo>` from the git root

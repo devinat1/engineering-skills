@@ -17,7 +17,7 @@ Assess progress from observed work, choose the next problems, and update one per
 ## Hard boundaries
 
 - Use the installed `obsidian` CLI directly for every vault read and write. Do not use MCP or raw filesystem access to the vault.
-- Target `vault=State` and `Notes/CP/LeetCode Weekly Plan.md`.
+- Target `vault=State`. Read `external_resources.leetcode_note` and `external_resources.obsidian_state` from `~/.agentic/index.json`, derive the vault-relative note path, and use it with the Obsidian CLI.
 - Some agent-managed notes live under `Agentic/` in both the State and Church vaults. This workflow remains State-only: check `vault=State path=Agentic` before treating a named note as missing, update an existing moved match in place, and never recreate it at an old path or create a duplicate.
 - Do not ask for a company, target date, role, or readiness standard.
 - Do not emit a pass/fail band, detailed daily schedule, or per-activity time budget.

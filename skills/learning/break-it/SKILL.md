@@ -36,7 +36,7 @@ nothing yet; wait for their answer.
 
 ## Phase 2: Scaffold (beat 2)
 
-Create the lab at `~/.claude/labs/break-it/<concept-slug>-YYYY-MM-DD/` (append `-2`, `-3` on a
+Create the lab at `~/.agentic/artifacts/labs/break-it/<concept-slug>-YYYY-MM-DD/` (append `-2`, `-3` on a
 same-day collision).
 - If a bundled template exists for this concept (see `templates/`), copy it and adjust the scenario
   constants to fit the user's situation.

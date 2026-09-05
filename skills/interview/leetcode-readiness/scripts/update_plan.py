@@ -2,6 +2,9 @@
 """Safely replace the generated section of the LeetCode weekly plan."""
 
 import argparse
+import json
+import os
+from pathlib import Path
 import re
 import shutil
 import subprocess
@@ -10,7 +13,10 @@ import sys
 
 START_MARKER = "<!-- leetcode-readiness:start -->"
 END_MARKER = "<!-- leetcode-readiness:end -->"
-DEFAULT_PATH = "Notes/CP/LeetCode Weekly Plan.md"
+def indexed_plan_path() -> str:
+    root = Path(os.environ.get("AGENTIC_HOME", Path.home() / ".agentic")).expanduser()
+    resources = json.loads((root / "index.json").read_text())["external_resources"]
+    return str(Path(resources["leetcode_note"]).relative_to(Path(resources["obsidian_state"])))
 CLI_NOISE = (
     re.compile(r"^\d{4}-\d{2}-\d{2} .* Loading updated app package "),
     re.compile(r"^Your Obsidian installer is out of date\."),
@@ -100,7 +106,7 @@ def update_note(executable: str, vault: str, path: str, generated: str) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--vault", default="State")
-    parser.add_argument("--path", default=DEFAULT_PATH)
+    parser.add_argument("--path", help="Vault-relative note path; defaults to the shared index")
     args = parser.parse_args()
 
     executable = shutil.which("obsidian")
@@ -108,8 +114,12 @@ def main() -> int:
         parser.error("obsidian CLI is not installed or not on PATH")
 
     try:
+        if args.path is None:
+            if args.vault != "State":
+                raise ValueError("An explicit --path is required for a non-State vault")
+            args.path = indexed_plan_path()
         update_note(executable, args.vault, args.path, sys.stdin.read())
-    except (RuntimeError, ValueError) as error:
+    except (RuntimeError, ValueError, OSError, KeyError) as error:
         print(f"error: {error}", file=sys.stderr)
         return 1
 

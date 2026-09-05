@@ -4,6 +4,8 @@
 !.gitignore
 !README.md
 !CLAUDE.md
+!AGENTS.md
+**/__pycache__/
 !.claude-plugin/
 !.claude-plugin/**
 !docs/
