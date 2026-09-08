@@ -3,6 +3,7 @@
   "skills": [
     "./skills/engineering/clean",
     "./skills/engineering/ddd",
+    "./skills/engineering/firecrawl",
     "./skills/engineering/graphite",
     "./skills/engineering/onboard",
     "./skills/engineering/oop",

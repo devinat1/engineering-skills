@@ -4,6 +4,7 @@
 
 - **[clean](./clean/SKILL.md)** — Review code for clean naming conventions — descriptive, intention-revealing names. Use when the user invokes /clean or asks for a clean code naming review.
 - **[ddd](./ddd/SKILL.md)** — Review code against Domain-Driven Design aggregate rules. Use when the user invokes /ddd or asks for a DDD aggregate review.
+- **[firecrawl](./firecrawl/SKILL.md)** — Scrape URLs, render JavaScript, crawl or map sites, search the web, and extract structured JSON through the private self-hosted Firecrawl API. Use for public or homelab web content without paid Firecrawl calls.
 - **[graphite](./graphite/SKILL.md)** — Split branch work into a logical Graphite PR stack. Use when the user invokes /graphite.
 - **[onboard](./onboard/SKILL.md)** — Produce a concise onboarding doc for the current codebase. Use when the user invokes /onboard or says "onboard me to this codebase".
 - **[oop](./oop/SKILL.md)** — Review code against principles from Elegant Objects by Yegor Bugayenko. Use when the user invokes /oop or asks for an elegant objects review.
