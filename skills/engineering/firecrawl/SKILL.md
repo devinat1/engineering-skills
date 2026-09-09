@@ -28,7 +28,7 @@ Send the following JSON bodies with `POST`, `Content-Type: application/json`, an
 | Search plus content | `/v2/search` | `{"query":"your query","limit":3,"scrapeOptions":{"formats":["markdown"]}}` |
 | Schema extraction | `/v2/scrape` | `{"url":"https://TARGET","timeout":180000,"formats":[{"type":"json","prompt":"Extract the price in dollars","schema":{"type":"object","properties":{"price":{"type":"number"}},"required":["price"]}}]}` |
 
-Scrapes return `data.markdown`, `data.html`, `data.links`, `data.summary`, or `data.json` according to requested formats; map returns `links`; search returns `data.web`. Local Ollama (`qwen2.5:7b-instruct`) extraction may be slow or inaccurate: validate returned JSON against the requested schema and source. Explicitly use `skipTlsVerification: false` to require target certificate verification; do not disable it unless the user trusts that target.
+Scrapes return `data.markdown`, `data.html`, `data.links`, `data.summary`, or `data.json` according to requested formats; map returns `links`; search returns `data.web`. Local Ollama (`qwen3.5:latest`) extraction may be slow or inaccurate: validate returned JSON against the requested schema and source. Explicitly use `skipTlsVerification: false` to require target certificate verification; do not disable it unless the user trusts that target.
 
 ## Asynchronous work and retries
 
