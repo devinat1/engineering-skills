@@ -3,6 +3,21 @@ name: thermo-nuclear-code-quality-review
 description: Run a required Greptile CLI first-pass gate followed by an extremely strict maintainability review for abstraction quality, giant files, and spaghetti-condition growth. Use for a pre-PR review, thermo-nuclear code quality review, thermonuclear review, deep code quality audit, or especially harsh maintainability review.
 ---
 
+## Automatic Jev check
+
+For each already-proposed maintainability finding with a bounded changed-code
+slice and sufficient nearby context, read
+`${AGENTIC_HOME:-$HOME/.agentic}/artifacts/jev/PROTOCOL.md` and run its helper.
+Send stable source IDs, the proposed finding, its applicable standard, and only
+the needed code/context. Ask one **Noul** per finding: `Does this evidence
+support the proposed structural code-quality regression or missed simplification
+under the stated standard?` True means it supports the whole finding; false
+means it does not; missing context remains unresolved. Make the ordinary judgment
+first and reconcile the advisory answer with it. On unavailable, disagreement,
+or ambiguity, retain the existing strict review and independent tests/navigation;
+never hide an evidence-backed finding or authorize a remediation.
+
+
 # Thermo-Nuclear Code Quality Review
 
 ## Consequential advice

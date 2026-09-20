@@ -3,6 +3,21 @@ name: interviewer
 description: Simulates a brutal mock interviewer on any topic. Use when the user invokes /interviewer or wants harsh interview practice.
 disable-model-invocation: true
 ---
+## Automatic Jev check
+
+After a user answer and before the ordinary assessment of that answer, when the
+current question and a bounded answer/transcript exist, read
+`${AGENTIC_HOME:-$HOME/.agentic}/artifacts/jev/PROTOCOL.md` and run its helper.
+Send stable source IDs for the question, answer, and only needed prior turns.
+Ask a **Choice**: `Relative to this question, is the answer demonstrated,
+contradicted, or unclear?` `demonstrated` requires a correct, specific answer;
+`contradicted` requires an explicit material error; `unclear` covers incomplete
+or insufficient evidence. Keep the interviewer’s own assessment and follow-up
+choice authoritative; on unavailable, disagreement, or unclear, continue the
+existing interview flow. The result is advisory, does not add a user-facing
+confidence score, and never authorizes an action.
+
+
 
 # Harsh Interviewer
 

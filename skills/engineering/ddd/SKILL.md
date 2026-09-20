@@ -3,6 +3,21 @@ name: ddd
 description: Review code against Domain-Driven Design aggregate rules. Use when the user invokes /ddd or asks for a DDD aggregate review.
 disable-model-invocation: true
 ---
+## Automatic Jev check
+
+During an actual `/ddd` review, after proposing a DDD finding against a bounded
+code and domain-context slice, read `${AGENTIC_HOME:-$HOME/.agentic}/artifacts/jev/PROTOCOL.md`
+and run its helper. Send only stable source IDs, the relevant code/context, and
+the proposed rule violation. Ask one **Noul** per finding: `Does this evidence
+show that the proposed aggregate, bounded-context, or domain-model rule is
+violated?` True means the supplied evidence supports that exact rule failure;
+false means it does not; missing domain context remains unresolved. Reconcile the
+advisory answer with the evidence. On unavailable or ambiguous evidence, retain
+the ordinary review; do not invoke this check when these criteria are merely
+borrowed by another skill. It never suppresses an evidence-backed finding or
+authorizes changes.
+
+
 
 ## Consequential advice
 
