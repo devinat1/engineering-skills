@@ -2,6 +2,21 @@
 name: leetcode-readiness
 description: Use when the user invokes /leetcode-readiness or wants an evidence-based LeetCode progress assessment, interview-readiness date, or next-week problem plan from LeetCode and Obsidian history.
 ---
+## Automatic Jev check
+
+After selecting a small, evidence-backed shortlist for one queue slot, when the
+candidate problem metadata and the user’s minimized relevant history exist, read
+`${AGENTIC_HOME:-$HOME/.agentic}/artifacts/jev/PROTOCOL.md` and run its helper.
+Send stable source IDs, the candidate title/topic/similarity metadata, and only
+the needed history excerpts. Ask a **Score** on `fit for this queue slot` with five concrete ordered
+criteria: `unrelated to the demonstrated need`; `weak topical connection`;
+`relevant topic but weak match to the demonstrated struggle`; `direct match to
+the struggle or review need`; `direct match plus appropriate difficulty and
+recency fit`. Use it only to order the shortlisted candidates. On unavailable or ambiguous evidence, use the existing selection
+process; the advisory score never determines readiness, alters the no-rubric
+output, or authorizes an Obsidian write.
+
+
 
 # LeetCode Readiness
 
