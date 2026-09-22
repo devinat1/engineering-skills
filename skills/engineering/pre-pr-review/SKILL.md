@@ -2,13 +2,29 @@
 name: pre-pr-review
 description: |
   Use after a feature is complete and before opening a PR in any sibling.
-  Repo-specific lint only — then runs ponytail-review, then loops
+  First organizes changes into a coherent Graphite PR stack with approval
+  before rewriting. Then runs repo-specific lint and ponytail-review, then loops
   thermo-nuclear-code-quality-review (via the loop skill) until the
   maintainability audit comes back clean, audits changed claims with
   confounder, and finishes with a human attention map.
   Triggers: feature complete, user says "open a PR", "pre-PR check",
   "review my changes", or before invoking gh pr create.
 ---
+## Automatic Jev check
+
+For each already-proposed report-only checklist or review finding with a bounded
+cumulative-diff slice and relevant nearby code, read
+`${AGENTIC_HOME:-$HOME/.agentic}/artifacts/jev/PROTOCOL.md` and run its helper.
+Send stable source IDs, the proposed finding and criterion, and only the needed
+diff/context. Ask one **Noul** per finding: `Does the supplied evidence support
+this proposed finding under its stated criterion?` True means it supports the
+whole finding; false means it does not; missing context remains unresolved.
+Make the ordinary judgment first and reconcile the advisory answer with it. On
+unavailable, disagreement, or ambiguity, use the existing review path; never
+hide an evidence-backed finding, alter required checks, or authorize Graphite,
+fixes, submission, cleanup, or any other side effect.
+
+
 
 ## Automatic Jev check
 
@@ -27,8 +43,8 @@ fixes, submission, cleanup, or any other side effect.
 
 # Pre-PR review (repo-specific)
 
-You are doing a final pre-PR check on changes about to be opened as a
-pull request. The checklist part of this skill covers **repo-specific
+First run § Organize the Graphite stack, then perform the final pre-PR
+review on the cumulative stack diff. The checklist part covers **repo-specific
 invariants only**. Generic code-quality review (clarity, naming,
 duplication, error handling, etc.) is the job of the
 `thermo-nuclear-code-quality-review` skill. Complexity-only review is the
@@ -45,8 +61,40 @@ repo-wide invariants or verification); even then, run the confounder audit
 and print the final `Human attention map` section after noting that the
 ponytail-review pass and thermo-nuclear loop were skipped.
 
-**Behavior:** report findings, do not auto-fix. List violations with
-file:line citations.
+**Behavior:** the Graphite preparation phase may rewrite after approval,
+and the maintainability loop may fix findings. The checklist and other
+report-only audits do not auto-fix. List violations with file:line citations.
+
+## Organize the Graphite stack
+
+Before lint or review, say that you are using `graphite` to organize the
+implemented changes into a coherent local PR stack. Load and follow the
+`graphite` skill, including user-selected priorities, Jev group/placement checks,
+explicit approval for local rewriting and disclosed local cleanup, and recovery
+safeguards. Complete its local safety checks and approved cleanup here. Graphite
+runs no tests or code review and makes no remote changes. Keep an already coherent
+stack unchanged rather than splitting for its own sake.
+
+Continue only after Graphite has accounted for every input change and returned
+the local stack with verified relationships and recoverable backups. If
+preparation is blocked, report the blocker instead of declaring the stack ready
+for review. This is not a claim that the stack passed tests.
+
+Review the stack as one integrated change: use the cumulative diff from the
+trunk merge-base to the selected stack tip, including all ancestor PR changes.
+Run the checklist, complexity review, maintainability loop, confounder audit,
+and human attention map against that same cumulative scope, not separately per
+PR. Run integrated checks at the stack tip. If the stack forks, identify the
+selected provider/path; a sibling tip is not included implicitly.
+
+Route applied fixes through Graphite's § Absorb review fixes, then rerun the
+cumulative review against the returned tip. Graphite owns fix placement, PR
+boundaries, restacking, and local safety checks; this skill owns cumulative
+review and integrated tests. After the review pipeline passes, finish with the
+Human attention map and leave publication manual. Do not resume a Graphite
+submission phase or mutate remote resources under its local-only approval.
+If review gates fail, report them without claiming the local preparation passed
+review; preserve the recovery data from any already-completed local cleanup.
 
 ## Consequential advice
 
@@ -179,7 +227,8 @@ complete cleanly, continue with the confounder audit anyway.
 
 Say that you are using `confounder` to check the branch changes for conflated
 concepts, missing bridges, and contradictions. Set its source explicitly to
-the current branch diff against the PR base, including claims expressed by
+the cumulative stack diff from the trunk merge-base to the selected tip,
+including claims expressed by
 changed documentation, specifications, tests, comments, names, interfaces,
 and observable behavior. An earlier `unscramble` output counts only when it
 covers this exact diff; otherwise let `confounder` run its claim-resolution
@@ -223,7 +272,7 @@ merge by itself.
 
 Give the explore agent a narrow brief:
 
-- Review the branch diff against the PR base.
+- Review the cumulative stack diff from the trunk merge-base to the selected tip.
 - Focus on changed files and enough nearby surrounding code to understand
   the changed section.
 - Include enclosing function/component/resource context when useful.
@@ -278,6 +327,11 @@ Produce a checklist-style report:
 
 ```
 ## Pre-PR review
+
+### Graphite stack
+- [PASS|BLOCKED] <local branch sequence, parent relationships, Jev dispositions, safety checks; not test validation>
+
+### Cumulative review: <stack tip> (base: <trunk merge-base>)
 
 ### Repo-wide invariants
 - [PASS|FAIL] <invariant> — <evidence or finding>
