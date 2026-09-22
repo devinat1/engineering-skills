@@ -3,6 +3,21 @@ name: system
 description: Conducts realistic system design interview practice sessions using the Socratic method. Use when the user invokes /system or wants mock system design interview practice.
 disable-model-invocation: true
 ---
+## Automatic Jev check
+
+After a candidate completes a phase and before the ordinary phase feedback,
+when the phase criterion and bounded relevant transcript exist, read
+`${AGENTIC_HOME:-$HOME/.agentic}/artifacts/jev/PROTOCOL.md` and run its helper.
+Send stable source IDs for the criterion, candidate statements, and only needed
+interviewer prompts. Ask a **Choice**: `For this phase criterion, is the
+candidate response demonstrated, contradicted, or unclear?` `demonstrated`
+requires specific support in the supplied transcript; `contradicted` requires
+an explicit material error; `unclear` covers missing or insufficient evidence.
+The interviewer retains its own feedback and scorecard judgment; on unavailable,
+disagreement, or unclear, continue the existing flow. This is advisory only and
+never changes the required scorecard format or authorizes an action.
+
+
 
 ## System Design Interviewer
 

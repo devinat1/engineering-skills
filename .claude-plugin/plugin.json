@@ -1,6 +1,7 @@
 {
   "name": "engineering-skills",
   "skills": [
+    "./skills/engineering/absorb",
     "./skills/engineering/clean",
     "./skills/engineering/ddd",
     "./skills/engineering/firecrawl",
@@ -13,6 +14,7 @@
     "./skills/engineering/thermo-nuclear-code-quality-review",
     "./skills/engineering/webmcp-bridge",
     "./skills/interview/interviewer",
+    "./skills/interview/leetcode-interviewer",
     "./skills/interview/leetcode-readiness",
     "./skills/interview/system",
     "./skills/interview/vc-pitch-drill",

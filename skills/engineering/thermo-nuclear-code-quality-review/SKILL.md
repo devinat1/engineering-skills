@@ -1,7 +1,22 @@
 ---
 name: thermo-nuclear-code-quality-review
-description: Run a required Greptile CLI first-pass gate followed by an extremely strict maintainability review for abstraction quality, giant files, and spaghetti-condition growth. Use for a pre-PR review, thermo-nuclear code quality review, thermonuclear review, deep code quality audit, or especially harsh maintainability review.
+description: Run an extremely strict maintainability review for abstraction quality, giant files, and spaghetti-condition growth. Use for a pre-PR review, thermo-nuclear code quality review, thermonuclear review, deep code quality audit, or especially harsh maintainability review.
 ---
+## Automatic Jev check
+
+For each already-proposed maintainability finding with a bounded changed-code
+slice and sufficient nearby context, read
+`${AGENTIC_HOME:-$HOME/.agentic}/artifacts/jev/PROTOCOL.md` and run its helper.
+Send stable source IDs, the proposed finding, its applicable standard, and only
+the needed code/context. Ask one **Noul** per finding: `Does this evidence
+support the proposed structural code-quality regression or missed simplification
+under the stated standard?` True means it supports the whole finding; false
+means it does not; missing context remains unresolved. Make the ordinary judgment
+first and reconcile the advisory answer with it. On unavailable, disagreement,
+or ambiguity, retain the existing strict review and independent tests/navigation;
+never hide an evidence-backed finding or authorize a remediation.
+
+
 
 # Thermo-Nuclear Code Quality Review
 
@@ -14,27 +29,6 @@ When the gate applies, first say that you are using `/dissenter` and why.
 Use this skill for an unusually strict review focused on implementation quality, maintainability, abstraction quality, and codebase health.
 
 Above all, this skill should push the reviewer to be **ambitious** about code structure. Do not merely identify local cleanup opportunities. Actively search for "code judo" moves: restructurings that preserve behavior while making the implementation dramatically simpler, smaller, more direct, and more elegant.
-
-## Greptile CLI Gate
-
-Before doing the manual thermo-nuclear review, run Greptile as a required
-first-pass gate.
-
-1. Verify the CLI exists:
-   `command -v greptile`
-2. Verify the current machine is signed in:
-   `greptile whoami`
-   - If Greptile reports that the user is not signed in, stop and instruct
-     them to run `greptile login`.
-3. Run the review against the repository default base branch:
-   `greptile review --agent --no-color`
-   - If a non-default base branch is known, use:
-     `greptile review --agent --no-color --branch=<base>`
-4. Treat missing CLI, auth failure, network failure, or review command failure
-   as blocking. Report the exact failed command and the relevant error output.
-5. Read the Greptile findings before the manual review. Reconcile them with
-   your own judgment; do not paste raw Greptile output wholesale, and do not
-   let Greptile replace the strict structural review below.
 
 ## Core Prompt
 
@@ -179,11 +173,8 @@ Good phrases:
 
 ## Output Expectations
 
-Start the review output with a Greptile status line:
-
-- If the gate ran successfully, write `Greptile: ran <exact command>`.
-- If the gate is blocked, write `Blocked: Greptile gate failed`, include the
-  exact command that failed and the relevant error output, then stop.
+Start the review output with the reviewed scope and verdict. Support findings
+with file locations and concrete evidence; state any validation limitations.
 
 Prioritize findings in this order:
 

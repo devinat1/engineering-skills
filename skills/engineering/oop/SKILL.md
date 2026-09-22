@@ -3,6 +3,21 @@ name: oop
 description: Review code against principles from Elegant Objects by Yegor Bugayenko. Use when the user invokes /oop or asks for an elegant objects review.
 disable-model-invocation: true
 ---
+## Automatic Jev check
+
+During an actual `/oop` review, after proposing an Elegant Objects finding
+against a bounded code slice, read
+`${AGENTIC_HOME:-$HOME/.agentic}/artifacts/jev/PROTOCOL.md` and run its helper.
+Send only stable source IDs, the relevant declarations/uses, and the proposed
+criterion failure. Ask one **Noul** per finding: `Does this evidence show that
+the proposed Elegant Objects criterion is violated?` True means the evidence
+supports that exact failure; false means it does not; missing surrounding design
+context remains unresolved. Reconcile the advisory answer with the evidence. On
+unavailable or ambiguous evidence, retain the ordinary review; do not invoke
+this check when these criteria are merely borrowed by another skill. It never
+suppresses an evidence-backed finding or authorizes changes.
+
+
 
 Based on the principles from _Elegant Objects_ by Yegor Bugayenko.
 
