@@ -1,0 +1,3 @@
+# Interview evidence check
+
+If the current question/criterion and a bounded candidate answer exist, read `${AGENTIC_HOME:-$HOME/.agentic}/artifacts/jev/PROTOCOL.md` and use its shared helper before ordinary feedback. Send only the criterion, answer, and indispensable earlier turns with stable IDs. Ask Choice: `demonstrated` (specific support), `contradicted` (explicit material error), or `unclear` (missing/incomplete evidence). This is advisory: keep the interviewer's own assessment and follow-up authoritative; on unavailable, disagreement, or unclear, continue the normal flow. Do not turn a model result into a user-facing confidence score or authorization for action.
