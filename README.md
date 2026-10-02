@@ -3,8 +3,9 @@
 Agent skills for software-engineering reviews, hands-on technical learning,
 repository workflows, and interview practice.
 
-General learning-loop, productivity, and writing skills live in
-[`devinat1/skills`](https://github.com/devinat1/skills).
+General learning-loop and writing skills live in
+[`devinat1/skills`](https://github.com/devinat1/skills). This repo also
+carries a small productivity bucket for engineering-adjacent agent tools.
 
 ## Quickstart
 
@@ -32,8 +33,10 @@ git clone git@github.com:devinat1/engineering-skills.git ~/.agentic/repos/engine
 - **[clean](./skills/engineering/clean/SKILL.md)** — Review code for clean naming conventions — descriptive, intention-revealing names. Use when the user invokes /clean or asks for a clean code naming review.
 - **[ddd](./skills/engineering/ddd/SKILL.md)** — Review code against Domain-Driven Design aggregate rules. Use when the user invokes /ddd or asks for a DDD aggregate review.
 - **[firecrawl](./skills/engineering/firecrawl/SKILL.md)** — Scrape URLs, render JavaScript, crawl or map sites, search the web, and extract structured JSON through the private self-hosted Firecrawl API. Use for public or homelab web content without paid Firecrawl calls.
+- **[fowler-refactor](./skills/engineering/fowler-refactor/SKILL.md)** — Apply Fowler's behavior-preserving, incremental refactoring practices when restructuring existing code to make it easier to understand or change. Load before extracting or inlining logic, moving responsibilities, or otherwise changing code structure without intending to change behavior; keep feature behavior changes distinct.
 - **[onboard](./skills/engineering/onboard/SKILL.md)** — Produce a concise onboarding doc for the current codebase. Use when the user invokes /onboard or says "onboard me to this codebase".
 - **[oop](./skills/engineering/oop/SKILL.md)** — Review code against principles from Elegant Objects by Yegor Bugayenko. Use when the user invokes /oop or asks for an elegant objects review.
+- **[ousterhout-refactor](./skills/engineering/ousterhout-refactor/SKILL.md)** — Deepen existing modules using Ousterhout's information-hiding lens when restructuring code without changing behavior. Load when callers know implementation details, a multi-step recipe leaks across modules, or an interface is harder to use than the complexity it hides; keep feature changes separate.
 - **[pattern-gate](./skills/engineering/pattern-gate/SKILL.md)** — Before code that adds structure, an API, a dependency, or control flow — including user-supplied code — show one pattern list and wait for approval. Also use on /pattern-gate, or when implementation would use a pattern not on the approved list.
 - **[pre-pr-review](./skills/engineering/pre-pr-review/SKILL.md)** — Use after a feature is complete and before opening a PR in any sibling. First organizes changes into a coherent Graphite PR stack using selected priorities and Jev choices. Then runs repo-specific lint and ponytail-review, then loops thermo-nuclear-code-quality-review (via the loop skill) until the maintainability audit comes back clean, audits changed claims with confounder, and finishes with a human attention map. Triggers: feature complete, user says "open a PR", "pre-PR check", "review my changes", or before invoking gh pr create.
 - **[rate](./skills/engineering/rate/SKILL.md)** — Rate the current branch diff (1-5) against clean code, DDD, OOP, and idiomatic principles. Use when the user invokes /rate.
@@ -58,3 +61,7 @@ git clone git@github.com:devinat1/engineering-skills.git ~/.agentic/repos/engine
 
 - **[break-it](./skills/learning/break-it/SKILL.md)** — Use to learn a system-design or performance concept by watching the naive version break under load and the pattern hold — "break it", "load test this", "where does this fall over", "/break-it &lt;concept&gt;". Builds a disposable Go+k6 lab; the user predicts the breaking point, runs it, sees the wall, applies the fix, re-runs. Load-measurable concepts only (pool exhaustion, missing cache, N+1, no rate limiting, no backpressure, no circuit breaker). NOT for refactoring or terminology — those are untangle / name-it.
 - **[lab](./skills/learning/lab/SKILL.md)** — Create one standalone coding exercise with learner files and executable unit tests. Use when the user asks for a coding lab, hands-on programming exercise, test-driven practice, or selects the lab modality in /learn. Conceptual and written-response exercises are out of scope.
+
+### Productivity
+
+- **[fact-check](./skills/productivity/fact-check/SKILL.md)** — Split supplied context into atomic factual claims and ask Jev for each claim's probability of being true. Use on /fact-check, "check these facts", or requests to score claim-level factual correctness with TypeSafe.

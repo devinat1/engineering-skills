@@ -5,8 +5,10 @@
     "./skills/engineering/clean",
     "./skills/engineering/ddd",
     "./skills/engineering/firecrawl",
+    "./skills/engineering/fowler-refactor",
     "./skills/engineering/onboard",
     "./skills/engineering/oop",
+    "./skills/engineering/ousterhout-refactor",
     "./skills/engineering/pattern-gate",
     "./skills/engineering/pre-pr-review",
     "./skills/engineering/rate",
@@ -24,6 +26,7 @@
     "./skills/interview/system",
     "./skills/interview/vc-pitch-drill",
     "./skills/learning/break-it",
-    "./skills/learning/lab"
+    "./skills/learning/lab",
+    "./skills/productivity/fact-check"
   ]
 }

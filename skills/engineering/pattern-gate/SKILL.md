@@ -5,15 +5,17 @@ description: Before code that adds structure, an API, a dependency, or control f
 
 # Pattern gate
 
-One pattern list covers the whole planned change. Approval of the list just shown is the permission to edit.
+One pattern list covers the whole planned change. Approval of the plan containing that list is permission to edit.
 
 ## When to run
 
-Run when the change adds or applies structure, an API, a dependency, or control flow. That includes code the user handed over verbatim.
+After initial read-only exploration, run when the change adds or applies structure, an API, a dependency, or control flow. That includes code the user handed over verbatim.
 
 Skip an edit that adds none of those, such as a typo, a comment, or formatting.
 
-Done when that choice is made before any edit.
+For applicable changes, put the pattern list inside the implementation plan. Present the combined plan and list for approval before editing; do not make pattern approval a later step. If implementation requires a pattern not listed, add it to the plan and get approval before using it.
+
+Done when the plan and its pattern list are approved before any edit.
 
 ## Pattern list
 
@@ -21,7 +23,7 @@ List every named design pattern, codebase convention, language feature, library,
 
 Each item has three parts: the name, where it will show up, and why it is being used.
 
-Show the list and wait. Done when the user explicitly approves that list.
+Include the list in the plan and wait. Done when the user explicitly approves the plan and its list.
 
 ## Unfamiliar terms
 
@@ -39,7 +41,7 @@ A flag or an explanation is not approval. The user may approve a list that still
 
 ## Revision
 
-When the user withholds approval, they name which items to change. Revise those items, show the full list again, and wait. Done when the user approves the list just shown.
+When the user withholds approval, they name which items to change. Revise the plan and its full list, then wait. Done when the user approves the revised plan and list.
 
 ## After approval
 
