@@ -16,23 +16,6 @@ preliminary critique, not to generate the rewrite or replace the visible X/10
 score. On unavailable, disagreement, or ambiguous evidence, keep the ordinary
 drill flow. It never authorizes an action.
 
-
-
-## Automatic Jev check
-
-After a user answer and preliminary critique, when the selected drill area,
-question, answer, and stated rubric exist, read
-`${AGENTIC_HOME:-$HOME/.agentic}/artifacts/jev/PROTOCOL.md` and run its helper.
-Send stable source IDs and only those texts. Ask four independent **Scores**, one
-per rubric dimension, each with these ordered criteria: `absent or contradicted`;
-`asserted but generic`; `specific but materially unsupported or incomplete`;
-`specific and materially supported`; `specific, supported, and resilient to the
-question’s central challenge`. Use the advisory results to inspect the
-preliminary critique, not to generate the rewrite or replace the visible X/10
-score. On unavailable, disagreement, or ambiguous evidence, keep the ordinary
-drill flow. It never authorizes an action.
-
-
 # VC Pitch Drill
 
 Run a focused pre-seed fundraising drill that teaches the user to speak in investor-ready terms through practice, critique, and rewrites.

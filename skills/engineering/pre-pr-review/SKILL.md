@@ -24,23 +24,6 @@ unavailable, disagreement, or ambiguity, use the existing review path; never
 hide an evidence-backed finding, alter required checks, or authorize Graphite,
 fixes, submission, cleanup, or any other side effect.
 
-
-
-## Automatic Jev check
-
-For each already-proposed report-only checklist or review finding with a bounded
-cumulative-diff slice and relevant nearby code, read
-`${AGENTIC_HOME:-$HOME/.agentic}/artifacts/jev/PROTOCOL.md` and run its helper.
-Send stable source IDs, the proposed finding and criterion, and only the needed
-diff/context. Ask one **Noul** per finding: `Does the supplied evidence support
-this proposed finding under its stated criterion?` True means it supports the
-whole finding; false means it does not; missing context remains unresolved.
-Make the ordinary judgment first and reconcile the advisory answer with it. On
-unavailable, disagreement, or ambiguity, use the existing review path; never
-hide an evidence-backed finding, alter required checks, or authorize Graphite,
-fixes, submission, cleanup, or any other side effect.
-
-
 # Pre-PR review (repo-specific)
 
 First run § Organize the Graphite stack, then perform the final pre-PR

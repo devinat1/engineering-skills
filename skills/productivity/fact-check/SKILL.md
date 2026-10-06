@@ -90,3 +90,7 @@ with two short claims (one clearly true, one clearly false) in one request.
 Check model, answer type, and probability range — not a guessed correct
 probability. Those calls verify the API workflow only; factual accuracy on
 real claims has not been established here.
+
+## Incentive-check integration
+
+At the stage described below, read `${AGENTIC_HOME:-$HOME/.agentic}/skills/incentive-check/INTEGRATIONS.md` and use **Follow-up** mode. After the factual-claim result, offer a separate incentive-check when a material claim has a named public speaker and a direct public source. Keep P(true) and its table unchanged; incentive alignment is a separate question. If the user requested both checks, run the incentive assessment after the truth check within the supplied scope.
