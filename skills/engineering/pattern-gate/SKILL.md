@@ -1,19 +1,19 @@
 ---
 name: pattern-gate
-description: When preparing a build prompt, Build Brief, or implementation plan for code that adds structure, an API, a dependency, or control flow, include the pattern list in that artifact before presenting it. Trigger during preparation, not after the prompt or plan is approved. Also use on /pattern-gate, for user-supplied code, or when a new pattern is needed.
+description: When preparing a Plannotator plan or build prompt for code that adds structure, an API, a dependency, or control flow, include the pattern list in that artifact before review. Also use on /pattern-gate, for user-supplied code, or when a new pattern is needed.
 ---
 
 # Pattern gate
 
-One pattern list covers the whole planned change. Approval of the build artifact containing that list is permission to edit, subject to any other active gates.
+One pattern list covers the whole planned change. Approval of the Plannotator plan containing that list is permission to edit, subject to any other active gates.
 
 ## When to run
 
-Trigger as soon as an applicable build or change request is recognized, including code the user handed over verbatim. Load this skill before preparing the first build prompt, Build Brief, or implementation plan. Use initial read-only exploration and any required interview to identify the patterns.
+Trigger as soon as an applicable build or change request is recognized, including code the user handed over verbatim. Load this skill before preparing the first build prompt or implementation plan. Use initial read-only exploration and any required interview to identify the patterns.
 
 Skip an edit that adds no structure, API, dependency, or control flow, such as a typo, a comment, or formatting.
 
-Include the pattern list inside the first build artifact: `clarify`'s copy-paste prompt, `safeguard`'s Build Brief, or a direct implementation plan. Present the artifact and list together for approval. When the workflow only produces a prompt, include the list and approval requirement in that prompt and stop under that workflow's rules.
+Include the pattern list inside the first build artifact: `clarify`'s or `safeguard`'s Plannotator plan, or a direct implementation plan. Present the artifact and list together for approval. When a workflow produces a prompt rather than a plan, include the list and approval requirement in that prompt and stop under that workflow's rules.
 
 If a supplied prompt or plan lacks a pattern list, add it before requesting approval or starting edits. Mark unresolved pattern choices explicitly rather than inventing them; resolve those choices and obtain approval before using them.
 

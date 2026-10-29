@@ -7,7 +7,7 @@ disable-model-invocation: true
 
 During an actual `/oop` review, after proposing an Elegant Objects finding
 against a bounded code slice, read
-`${AGENTIC_HOME:-$HOME/.agentic}/artifacts/jev/PROTOCOL.md` and run its helper.
+`${AGENTIC_HOME:-$HOME/.agentic}/repos/skills/scripts/jev/PROTOCOL.md` and run its helper.
 Send only stable source IDs, the relevant declarations/uses, and the proposed
 criterion failure. Ask one **Noul** per finding: `Does this evidence show that
 the proposed Elegant Objects criterion is violated?` True means the evidence

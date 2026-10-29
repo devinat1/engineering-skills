@@ -6,7 +6,7 @@ description: Run direct, focused pre-seed VC pitch practice drills. Use when the
 
 After a user answer and preliminary critique, when the selected drill area,
 question, answer, and stated rubric exist, read
-`${AGENTIC_HOME:-$HOME/.agentic}/artifacts/jev/PROTOCOL.md` and run its helper.
+`${AGENTIC_HOME:-$HOME/.agentic}/repos/skills/scripts/jev/PROTOCOL.md` and run its helper.
 Send stable source IDs and only those texts. Ask four independent **Scores**, one
 per rubric dimension, each with these ordered criteria: `absent or contradicted`;
 `asserted but generic`; `specific but materially unsupported or incomplete`;

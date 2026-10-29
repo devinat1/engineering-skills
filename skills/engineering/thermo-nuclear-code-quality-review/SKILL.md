@@ -6,7 +6,7 @@ description: Run an extremely strict maintainability review for abstraction qual
 
 For each already-proposed maintainability finding with a bounded changed-code
 slice and sufficient nearby context, read
-`${AGENTIC_HOME:-$HOME/.agentic}/artifacts/jev/PROTOCOL.md` and run its helper.
+`${AGENTIC_HOME:-$HOME/.agentic}/repos/skills/scripts/jev/PROTOCOL.md` and run its helper.
 Send stable source IDs, the proposed finding, its applicable standard, and only
 the needed code/context. Ask one **Noul** per finding: `Does this evidence
 support the proposed structural code-quality regression or missed simplification

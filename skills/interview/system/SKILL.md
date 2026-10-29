@@ -7,7 +7,7 @@ disable-model-invocation: true
 
 After a candidate completes a phase and before the ordinary phase feedback,
 when the phase criterion and bounded relevant transcript exist, read
-`${AGENTIC_HOME:-$HOME/.agentic}/artifacts/jev/PROTOCOL.md` and run its helper.
+`${AGENTIC_HOME:-$HOME/.agentic}/repos/skills/scripts/jev/PROTOCOL.md` and run its helper.
 Send stable source IDs for the criterion, candidate statements, and only needed
 interviewer prompts. Ask a **Choice**: `For this phase criterion, is the
 candidate response demonstrated, contradicted, or unclear?` `demonstrated`

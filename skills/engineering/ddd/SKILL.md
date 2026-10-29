@@ -6,7 +6,7 @@ disable-model-invocation: true
 ## Automatic Jev check
 
 During an actual `/ddd` review, after proposing a DDD finding against a bounded
-code and domain-context slice, read `${AGENTIC_HOME:-$HOME/.agentic}/artifacts/jev/PROTOCOL.md`
+code and domain-context slice, read `${AGENTIC_HOME:-$HOME/.agentic}/repos/skills/scripts/jev/PROTOCOL.md`
 and run its helper. Send only stable source IDs, the relevant code/context, and
 the proposed rule violation. Ask one **Noul** per finding: `Does this evidence
 show that the proposed aggregate, bounded-context, or domain-model rule is

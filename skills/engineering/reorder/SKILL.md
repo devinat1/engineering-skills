@@ -75,3 +75,9 @@ diffs outside that review workflow belong to absorb.
 Finish with the shared final check. Return the entry mode, resulting branch
 sequence/parents, applied changes, and pending reasons in one concise result.
 Leave cleanup and publication unperformed; this skill never mutates remotes.
+
+At completion, read the configured suggestions from
+`${AGENTIC_HOME:-$HOME/.agentic}/repos/skills/docs/skill-connections.md`
+and follow its completion-suggestion rules. Offer the follow-up for a completed
+standalone run, including a valid no-op; child runs return to their owning workflow.
+Suggestions are manual and do not start the next skill.

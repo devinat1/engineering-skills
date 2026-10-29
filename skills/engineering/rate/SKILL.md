@@ -7,7 +7,7 @@ disable-model-invocation: true
 
 When `/rate` is reviewing an actual branch diff and has an evidence-backed
 preliminary rating for a named guideline, read
-`${AGENTIC_HOME:-$HOME/.agentic}/artifacts/jev/PROTOCOL.md` and run its helper.
+`${AGENTIC_HOME:-$HOME/.agentic}/repos/skills/scripts/jev/PROTOCOL.md` and run its helper.
 Send stable source IDs, the bounded diff/context, the named guideline, and the
 proposed rating. Ask a **Choice**: `Does the supplied evidence support this
 proposed rating?` with `supports` (the cited evidence supports it), `contradicts`

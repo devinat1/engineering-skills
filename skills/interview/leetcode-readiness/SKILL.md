@@ -6,7 +6,7 @@ description: Use when the user invokes /leetcode-readiness or wants an evidence-
 
 After selecting a small, evidence-backed shortlist for one queue slot, when the
 candidate problem metadata and the user’s minimized relevant history exist, read
-`${AGENTIC_HOME:-$HOME/.agentic}/artifacts/jev/PROTOCOL.md` and run its helper.
+`${AGENTIC_HOME:-$HOME/.agentic}/repos/skills/scripts/jev/PROTOCOL.md` and run its helper.
 Send stable source IDs, the candidate title/topic/similarity metadata, and only
 the needed history excerpts. Ask a **Score** on `fit for this queue slot` with five concrete ordered
 criteria: `unrelated to the demonstrated need`; `weak topical connection`;

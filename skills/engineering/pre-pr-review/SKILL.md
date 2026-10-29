@@ -14,7 +14,7 @@ description: |
 
 For each already-proposed report-only checklist or review finding with a bounded
 cumulative-diff slice and relevant nearby code, read
-`${AGENTIC_HOME:-$HOME/.agentic}/artifacts/jev/PROTOCOL.md` and run its helper.
+`${AGENTIC_HOME:-$HOME/.agentic}/repos/skills/scripts/jev/PROTOCOL.md` and run its helper.
 Send stable source IDs, the proposed finding and criterion, and only the needed
 diff/context. Ask one **Noul** per finding: `Does the supplied evidence support
 this proposed finding under its stated criterion?` True means it supports the

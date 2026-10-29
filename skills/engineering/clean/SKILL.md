@@ -7,7 +7,7 @@ disable-model-invocation: true
 
 During an actual `/clean` review, after proposing a naming finding against a
 bounded changed-code slice, read
-`${AGENTIC_HOME:-$HOME/.agentic}/artifacts/jev/PROTOCOL.md` and run its helper.
+`${AGENTIC_HOME:-$HOME/.agentic}/repos/skills/scripts/jev/PROTOCOL.md` and run its helper.
 Send only stable source IDs, the relevant declaration/use lines, and the proposed
 finding. Ask one **Noul** per finding: `Does this evidence show that the proposed
 name fails the stated clean-naming criterion?` True means the cited evidence
